@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Инструкция оператора Avalanche Online</title>
+    <meta name="description" content="Интерактивное руководство">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!--Content table-->
+    <div class="menu">
+        <h1><a name="contents_table">Содержание</a></h1>
+        <ul>
+            <li><a href="#auth"> Страница &laquo;Авторизация&raquo;.</a></li>
+            <li><a href="#anal"> Страница &laquo;Аналитика&raquo;.</a></li>
+            <li><a href="#feed"> Страница &laquo;Лента новостей&raquo;.</a></li>
+            <li><a href="#lavina"> Экран руководителя.</a></li>
+            <li><a href="#rubrics"> Страница &laquo;Рубрики&raquo;.</a></li>
+            <li><a href="#tasks"> Страница &laquo;Задачи&raquo;.</a></li>
+            <li><a href="#dossier"> Страница &laquo;Досье&raquo;.</a></li>
+            <li><a href="#sources"> Страница &laquo;Источники&raquo;.</a></li>
+            <li><a href="#scanner"> Страница &laquo;Сканер&raquo;.</a></li>
+            <li><a href="#reports"> Страница &laquo;Отчёты&raquo;.</a></li>
+            <li><a href="#cabinet"> Личный кабинет.</a></li>
+            <li><a href="#rub_op"> Операторы запросов рубрик.</a></li>
+            <li><a href="#rub_rules"> Дополнительные правила для рубрик.</a></li>
+        </ul>
+        <p><a href="#addons">Приложение 1.</a></p>
+        <p><a href="#source_map">Сценарий сбора информации с веб-страницы.</a></p>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of content table-->
+
+    <!--Authorization-->
+    <div>
+        <h1><a name="auth"></a>1.Страница &laquo;Авторизация&raquo;</h1>
+        <p>Для авторизации в системе требуется ввести имя пользователя и пароль и нажать кнопку &laquo;SIGN IN&raquo;.</p>
+        <img src=screenshots/ru/authorization/login.png> <p class="fig">Рис. 1 &ndash; Страница &laquo;Авторизация&raquo;</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Ввести учётные данные.</li>
+                <li>Нажать кнопку &laquo;SIGN IN&raquo;.</li>
+                <li>Откроется страница &laquo;Аналитика&raquo;.</li>
+            </ol>
+        </div>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of Authorization-->
+    <!--Analalytics-->
+    <div>
+        <h1><a name="anal"></a>2. Страница &laquo;Аналитика&raquo;</h1>
+        <p>Отображает статистику текущего проекта по темам, рубрикам и источникам. В части &laquo;Важное&raquo; отображаются темы с настроенной важностью. Тональность рассчитывает отношение проанализированных карточек новостей. Нажатие на элементы из частей &laquo;Важное&raquo;, &laquo;Тональность сообщений&raquo; и &laquo;Динамика сообщений&raquo; применяет фильтр к <a class="invisa" href=#feed>ленте</a> и открывает новое окно браузера.</p>
+        <img src=screenshots/ru/analytics/Analytics1.png> <p class="fig">Рис. 2 &ndash; Страница &laquo;Аналитика&raquo;</p>
+        <div class="actions">
+            <ol>
+                <li>Нажать на узел графика.</li>
+                <li>Выполнен переход на страницу <a class="invisa" href="#feed">&laquo;Лента новостей&raquo;</a> с фильтрацией по выбранному параметру.</li>
+            </ol>
+        </div>
+        <img src=screenshots/ru/analytics/Analytics_dynamic.png> <p class="fig">Рис. 3 &ndash; Страница &laquo;Аналитика&raquo;. Динамика сообщений</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать на переключатель отображения графика.</li>
+                <li>Нажать на название рубрики или темы для фильтрации.</li>
+                <li>Нажать на точку графика для перехода в <a class="invisa" href=#feed>ленту</a> с фильтрацией новостей по дате и выбранной теме или рубрике.</li>
+            </ol>
+        </div>
+        <img src=screenshots/ru/analytics/Analytics_ton_imp.png> <p class="fig">Рис. 4 &ndash; Страница &laquo;Аналитика&raquo;. Важное и Тональность сообщений</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Навести курсор на элемент из части &laquo;Важное&raquo; для отображения описания новости.</li>
+                <li>Нажать на элемент из части &laquo;Важное&raquo; для перехода в <a class="invisa" href=#feed>ленту</a> с фильтрацией по теме.</li>
+                <li>Навести на элемент из части &laquo;Тональность сообщений&raquo; для перехода в <a class="invisa" href=#feed>ленту</a> с фильтрацией по тональности.</li>
+            </ol>
+        </div>
+        <img src=screenshots/ru/analytics/Analytics_report.png> <p class="fig">Рис. 5 &ndash; Страница &laquo;Аналитика&raquo;. Кнопка выгрузки отчёта</p>
+        <div class="actions">
+            <ol class="centro">
+                <li title="Если отчёт не загружается проверьте настройки браузера">Нажать кнопку &laquo;Выгрузить отчёт&raquo; для автоматического скачивания отчёта.</li>
+            </ol>
+        </div>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of Analalytics-->
+    <!--Feed-->
+    <div>
+        <h1><a name="feed"></a>3. Страница &laquo;Лента&raquo;</h1>
+        <img src=screenshots/ru/feed/Feed.png> <p class="fig">Рис. 6 &ndash; Страница &laquo;Лента&raquo;. Общий вид</p>
+        <p>Лента графически делится на три столбца. В левом отображаются созданные в проекте рубрики и темы, по центру отображаются карточки в компактном виде. В правой части открывается подробная информация о выбранной карточке.</p>
+        <img src=screenshots/ru/feed/Feed_card_full.png> <p class="fig">Рис. 7 &ndash; Страница &laquo;Лента&raquo;. Полное отображение и развёрнутый текст карточки </p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать на карточку в центральном столбце для её полного отображения.</li>
+                <li>Нажать &laquo;Читать полностью...&raquo; под текстом карточки в правом столбце для отображения текста целиком.</li>
+            </ol>
+        </div>
+        <!--<p>В среднем столбце выводится краткое отображение карточки. При нажатии на карточку она открывается на экране справа.</p>
+<img src = screenshots/feed_card_full.png>
+<p class = "fig">Рис. 4 &ndash; Страница &laquo;Лента новостей&raquo;, полное содержание карточки</p>-->
+        <p>Над средним столбцом находятся кнопки управления: выделение всех отображаемых карточек, создание отчёта по выбранным карточкам, удаление карточки из системы, счётчик записей и страниц, кнопка меняющая упорядочивания карточек от старых к новым и наоборот.</p>
+        <img src=screenshots/ru/Feed/Feed_central.png> <p class="fig">Рис. 8 &ndash; Страница &laquo;Лента&raquo;. Выбранные карточки. Счётчик и переключатель страниц</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать на изображение аватарки автора для выбора карточки.</li>
+                <li>Нажать стрелочки рядом со счётчиком карточек и страниц для перехода по страницам.</li>
+                <li>Нажать &laquo;Упорядочить по возрастанию&raquo; для отображения ленты от старых карточек к новым.</li>
+            </ol>
+        </div>
+        <img src=screenshots/ru/Feed/Feed_report_create.png> <p class="fig">Рис. 9 &ndash; Страница &laquo;Лента&raquo;. Кнопки создания отчёта, удаления и выделения карточек</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Отметить карточки выбранными.</li>
+                <li>Нажать кнопку выгрузки отчёта.</li>
+                <img class="img_act" src=screenshots/ru/Feed/Feed_report_confirm.png> <li>Подтвердить создание отчёта.</li>
+                <li>Система оповестит о начале создания отчёта.</li>
+                <img class="img_act" src=screenshots/ru/Feed/Feed_report_notification.png> <li>Загрузка отчёта начнётся автоматически.</li>
+            </ol>
+        </div>
+
+        <p>На развёрнутом виде карточки цветной полосой отображается цвет важности, под заголовком указана дата публикации (дата публикации, указаная изданием, отобразится, если <a class="invisa" href="#sources">источник</a> настроен на её сбор), расположены кнопки редактирования, добавления в &laquo;Избранное&raquo;, удаления и выключения подсветки <a class="invisa" href="#rub_op">ключевых слов</a>. В нижней части карточки система отобразит найденные данные, такие как Телефон, Хэш-теги, ссылки и другие.</p>
+        <img src=screenshots/ru/Feed/Feed_card_facts.png> <p class="fig">Рис. 10 &ndash; Страница &laquo;Лента&raquo;. Развёрнутый вид карточки</p>
+        <p>Для создания и изменения карточки используется редактор. В редакторе указываются <a class="invisa" href="#lavina">темы</a>, важность, тональность, дата и время публикации. Ввод ссылки на изображение прикрепит его к тексту карточки. Во вложение кнопками &laquo;Выберите файл&raquo; и &laquo;ЗАГРУЗИТЬ&raquo; добавляются файлы с компьютера. </p> <img src=screenshots/ru/Feed/Feed_card_start_edit.png> <p class="fig">Рис. 11 &ndash; Страница &laquo;Лента&raquo;. Редактор карточек</p>
+        <p>Для поиска по ленте используется &laquo;Фильтр&raquo;. Параметры фильтрации используют свойства карточек, источники, системные теги и время.</p>
+        <img src=screenshots/ru/Feed/Feed_filter.png> <p class="fig">Рис. 12 &ndash; Страница &laquo;Лента&raquo;. Фильтр</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать&laquo;Фильтр&raquo; для вызова окна выбора условий фильтрации.</li>
+                <li>Выбрать необходимые параметры.</li>
+                <li>Нажать &laquo;ПРИМЕНИТЬ&raquo; для отображения ленты новостей с применением выбранных условий фильтрации.</li>
+                <li>Нажать &laquo;Фильтр&raquo;.</li>
+                <li>Нажать &laquo;СБРОСИТЬ&raquo;: лента новостей отобразится по умолчанию.</li>
+            </ol>
+        </div>
+        <p>Нажатие на названия рубрик и или тем также применяет фильтр к ленте. Рядом с элементами списков находятся кнопки &laquo;Выбрать все&raquo; или &laquo;Сбросить&raquo;, если выбрано.</p>
+        <img src=screenshots/RU/Feed/Feed_left.png> <p class="fig">Рис. 13 &ndash; Страница &laquo;Лента новостей&raquo;, фильтрация по рубрикам и темам.</p>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of Feed-->
+    <!--Lavina-->
+    <div>
+        <h1><a name="lavina"></a>4. Экран руководителя</h1>
+        <p>Представляет собой лаконичное и актуальное отображение кратких карточек по темам с цветовой индикацией по важности. Экран обновляется автоматически.</p>
+        <!--Need normal text-->
+        <img src=screenshots/RU/Lavina/Lavina.png> <p class="fig">Рис. 14 &ndash; Раздел &laquo;Лавина пульс&raquo;. Общий вид</p>
+        <p>Для настройки экрана нажать &laquo;Редактировать блоки&raquo;. Каждый блок имеет название, место расположения на экране, свойства видимости и автопубликации.</p>
+        <img src=screenshots/RU/Lavina/Lavina_edit.png> <p class="fig">Рис. 15 &ndash; Раздел &laquo;Лавина пульс&raquo;. Редактирование блоков</p>
+        <p>Автопубликация устанавливается для автоматического отображения карточек, прошедших рубрикацию. Рубрики, карточки которых требуется отображать выбираются из списка.</p>
+        <img src=screenshots/RU/Lavina/Lavina_rub.png> <p class="fig">Рис. 16 &ndash; Раздел &laquo;Лавина пульс&raquo;. Добавление рубрик для автопубликации</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать &laquo;Редактировать блоки&raquo;: блоки поменяют внешний вид, станет доступна их настройка.</li>
+                <li>Нажать кнопку &laquo;+&raquo;: появится новый пустой блок. <img class="img_act" src=screenshots/RU/Lavina/Lavina_new.png> </li> <li>Заполнить название и настройки блока.</li>
+                <li>Выбрать положение блока на экране стрелками внизу блока. <img class="img_act" src=screenshots/RU/Lavina/Lavina_edit2.png> </li> <li>Нажать &laquo;УДАЛИТЬ БЛОК&raquo; в существующем блоке: блок будет удалён.</li>
+                <li>Нажать &laquo;СОХРАНИТЬ&raquo;: система отобразит уведомление.<img class="img_act" src=screenshots/RU/Lavina/Lavina_notification.png> </li> <li>Нажать &laquo;НАЗАД&raquo;: блоки поменяют внешний вид на обычное представление. </li>
+            </ol>
+        </div>
+        <p>Для добавления карточки используется редактор.</p>
+        <img src=screenshots/RU/Lavina/Lavina_add_card.png> <p class="fig">Рис. 17 &ndash; Страница &laquo;Лавина пульс&raquo;. Добавление новостной карточки</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать &laquo;Добавить карточку&raquo;: откроется окно добавления карточки.</li>
+                <li>Заполнить поля формы, нажать &laquo;СОХРАНИТЬ&raquo;.</li>
+            </ol>
+        </div>
+        <p>Созданная карточка появится в ленте новостей и в разделе &laquo;Лавина пульс&raquo;.</p>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of Lavina-->
+    <!--Rubrics-->
+    <div>
+        <h1><a name="rubrics"></a>5. Страница &laquo;Рубрики&raquo;</h1>
+        <p>В рубриках указываются поисковые запросы, по которым система будет проводить отбор новостей.</p>
+        <img src=screenshots/RU/Rubrics/Rubrics.png> <p class="fig">Рис. 18 &ndash; Страница &laquo;Рубрики&raquo;</p>
+        <p>Для создания рубрики используется одноименная кнопка &laquo;Создать рубрику&raquo;, после её нажатия система предложит ввести название новой рубрики.</p>
+        <img src=screenshots/RU/Rubrics/Rubrics_create.png> <p class="fig">Рис. 19 &ndash; Страница &laquo;Рубрики&raquo;. Окно создания рубрики</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать &laquo;Создать рубрику&raquo;: отобразится окно создания рубрики.</li>
+                <li>Ввести название, нажать &laquo;Сохранить&raquo;.</li>
+                <li>Новая рубрика появилась в списке слева.</li>
+            </ol>
+        </div>
+        <p>Настройка рубрик включает в себя <a class="invisa" href=#rub_op>запрос</a>, выбор <a class="invisa" href=#rub_rules>важности, тональности</a> и популярности, может применяться для избранных источников и уведомлять о карточках, которые прошли рубрикацию.</p>
+        <img src=screenshots/RU/Rubrics/Rubrics_tuning.png> <p class="fig">Рис. 20 &ndash; Страница &laquo;Рубрики&raquo;. Окно настроек рубрики</p>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of Rubrics-->
+    <!--Tasks-->
+    <div>
+        <h1><a name="tasks"></a>6. Страница &laquo;Задачи&raquo;</h1>
+        <p>Раздел &laquo;Задачи&raquo; служит для создания графов связей пользователей или групп и поиска профилей в социальных сетях. В кратком отображении списка задач отображаются название, тип, статус и данные о выполнении.</p>
+        <img src=screenshots/RU/Tasks/Tasks.png> <p class="fig">Рис. 21 &ndash; Страница &laquo;Задачи&raquo;. Общий вид</p>
+        <img src=screenshots/RU/Tasks/Tasks_new.png> <p class="fig">Рис. 22 &ndash; Страница &laquo;Задачи&raquo;, добавление новой задачи</p>
+        <p>После заполнения необходимых полей задача появится в списке.</p>
+        <p>После успешного выполнения задачи станет доступен результат выполнения:</p>
+        <img src=screenshots/RU/Tasks/Tasks_results.png> <p class="fig">Рис. 23 &ndash; Страница &laquo;Задачи&raquo;. Результат выполнения задачи</p>
+        <p>Кнопка &laquo;ДЕТАЛИ&raquo; откроет граф в новом окне браузера.</p>
+        <img src=screenshots/RU/Tasks/Tasks_graph.png> <p class="fig">Рис. 24 &ndash; Страница &laquo;Задачи&raquo;. Граф выполненной задачи</p>
+        <p>Граф масштабируется колёсиком мыши, перетаскиванием узлы располагаются вручную, длина связей регулируется нажатием кнопок &laquo;+&raquo; и &laquo;-&raquo;, справа расположены фильтры и кнопка создания отчёта. Нажатие на узел развернёт информацию о нём слева. Имя узла является ссылкой на профиль социальной сети.</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Выбрать завершенную задачу из списка, кликнуть на неё. Справа отобразится информация о задаче. Если задача выполнялась несколько раз, выбрать интересующие результаты из списка.</li>
+                <li>Нажать &laquo;ДЕТАЛИ&raquo;: задача с построением графов откроется в новом окне браузера.</li>
+                <li>Выбрать условия фильтрации справа. Неподходящие условиям фильтров узлы на графе станут прозрачными.</li>
+                <li>Нажать на узел графа. Слева отобразится информация об узле. Имя выбранного узла является ссылкой на профиль в социальной сети.</li>
+                <li>Нажать &laquo;ОТЧЁТ&raquo;. Предварительный просмотр отчёта откроется в новом окне.</li>
+            </ol>
+        </div>
+        <img src=screenshots/RU/Tasks/Tasks_node_details.png> <p class="fig">Рис. 25 &ndash; Страница &laquo;Задачи&raquo;. Информация об узле</p>
+        <p>В отчёте приведены графики и другая информация.</p>
+        <img src=screenshots/RU/Tasks/Tasks_report.png> <p class="fig">Рис. 26 &ndash; Страница &laquo;Задачи&raquo;. Элементы отчета</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать кнопку добавления задачи: откроется окно создания задач.</li>
+                <li>Из выпадающего списка выбрать <a class="invisa" href=#contents_table>тип задачи</a>. Окно изменится, предлагая заполнить необходимые условия.</li>
+                <li>Заполнить поля окна создания задачи, нажать &laquo;СОХРАНИТЬ&raquo;.</li>
+                <li>Задача появится в списке.</li>
+            </ol>
+        </div>
+        <!--Print page break-->
+        <p class="print"></p>
+    </div>
+    <!--End of Tasks-->
+    <!--Dossier-->
+    <div>
+        <h1><a name="dossier"></a>7. Страница &laquo;Досье&raquo;</h1>
+        <img src=screenshots/RU/Dossier/Dossier.png> <p class="fig">Рис. 27 &ndash; Страница &laquo;Досье&raquo;. Общий вид</p>
+        <p>В досье вводится информация о Персонах, Компаниях или Событиях. Запрос, созданный для объекта, отображает новости.</p>
+        <img src=screenshots/RU/Dossier/Dossier_add.png> <p class="fig">Рис. 28 &ndash; Страница &laquo;Досье&raquo;. Создание нового объекта</p>
+        <div class="actions">
+            <ol class="centro">
+                <li>Нажать кнопку добавления объекта: отобразится окно выбора типа объекта.</li>
+                <li>Выбрать необходимый тип объекта, нажать кнопку &laquo;Далее&raquo;.</li>
+                <img class="img_act" src=screenshots/RU/Dossier/Dossier_add.png> <li>Заполнить поля, предлагаемые для выбранного типа объекта, нажать &laquo;Далее&raquo;.</li>
+                <img class="img_act" src=screenshots/RU/Dossier/Dossier_form_pers.png> <li>Проверить правильность заполнения, нажать &laquo;ГОТОВО&raquo;. объект появится в списке.</li>
+                <img class="img_act" src=screenshots/RU/Dossier/Dossier_preview_pers.png> </ol> </div> <p>Создав поисковый запрос на вкладке &laquo;Общее&raquo;, во вкладке &laquo;Новости&raquo; будут отображаться карточки проекта, в которых присутствуют слова запроса.</p>
+                <img src=screenshots/RU/Dossier/Dossier_general.png> <p class="fig">Рис. 29 &ndash; Страница &laquo;Досье&raquo;, добавление поискового запроса</p>
+                <div class="actions">
+                    <ol class="centro">
+                        <li>Выбрать объект, нажать &laquo;Редактировать&raquo;.</li>
+                        <li>Указать поисковый запрос.</li>
+                        <li>Нажать &laquo;Сохранить&raquo;.</li>
+                        <li>Перейти во вкладку &laquo;Новости&raquo;: отобразится список карточек, содержащих текст запроса.</li>
+                        <li>Нажать на карточку из списка: отобразится полное представление карточки.</li>
+                    </ol>
+                </div>
+                <img src=screenshots/RU/Dossier/Dossier_news.png> <p class="fig">Рис. 30 &ndash; Страница &laquo;Досье&raquo;, отображение карточек по поисковому запросу</p>
+                <p>Во вкладке &laquo;Связи&raquo; добавляются связи с другими объектами раздела &laquo;Досье&raquo;, &laquo;Гео&raquo; добавит место на карте, возможно добавление заметок и документов с компьютера пользователя.</p>
+                <p>В схему связей можно добавлять только объекты из &laquo;Досье&raquo;, указывая тип связи. После сохранения схема связей будет доступна по кнопке &laquo;Схема связей&raquo;.</p>
+                <div class="actions">
+                    <ol class="centro">
+                        <li>Перейти во вкладку &laquo;Связи&raquo;.</li>
+                        <li>Нажать &laquo;Добавить связь&raquo;.</li>
+                        <li>Выбрать тип связи и объект.</li>
+                        <li>Нажать &laquo;Сохранить&raquo;.</li>
+                        <li>Нажать &laquo;Схема связей&raquo; для просмотра.</li>
+                    </ol>
+                </div>
+                <img src=screenshots/RU/Dossier/Dossier_links.png> <p class="fig">Рис. 31 &ndash; Страница &laquo;Досье&raquo;. Добавление связи</p>
+                <img src=screenshots/RU/Dossier/Dossier_report.png> <p class="fig">Рис. 32 &ndash; Страница &laquo;Досье&raquo;. Элементы отчёта</p>
+                <img src=screenshots/RU/Dossier/Dossier_files.png> <p class="fig">Рис. 33 &ndash; Страница &laquo;Досье&raquo;. Добавленные к досье документы</p>
+                <img src=screenshots/RU/Dossier/Dossier_links_graph.png> <p class="fig">Рисунок 34 &ndash; Страница &laquo;Досье&raquo;. Схема связей</p>
+
+                <p>Для элемента &laquo;Компания&raquo; во вкладке &laquo;Дополнительно&raquo; отображается информация из Росстата и ЕГРЮЛ. Для этого должны быть выполнены следующие условия:</p>
+                <ul>
+                    <li>Подключены базы для поиска информации</li>
+                    <li>Введён валидный ИНН</li>
+                </ul>
+                <img src=screenshots/RU/Dossier/Dossier_egrul.png> <p class="fig">Рисунок 35 &ndash; Страница &laquo;Досье&raquo;, загрузка данных из ЕГРЮЛ</p>
+                <img src=screenshots/RU/Dossier/Dossier_egrul_info.png> <p class="fig">Рисунок 36 &ndash; Страница &laquo;Досье&raquo;. Вкладка &laquo;Дополнительно&raquo;, отображение данных ЕГРЮЛ</p>
+                <!--Print page break-->
+                <p class="print"></p>
+        </div>
+        <!--End of Dossier-->
+        <!--Sources-->
+        <div>
+            <h1><a name="sources"></a>8. Страница &laquo;Источники&raquo;</h1>
+            <img src=screenshots/RU/Sources/Sources.png> <p class="fig">Рис. 37 &ndash; Страница &laquo;Источники&raquo;</p>
+            <p>Источники проекта служат для явного указания места сбора информации. Для создания источника нужно нажать кнопку, указать тип источника и заполнить поля.</p>
+            <img src=screenshots/RU/Sources/Sources_new.png> <p class="fig">Рис. 38 &ndash; Страница &laquo;Источники&raquo;. Добавление источника</p>
+            <p>Источник появится в списке.</p>
+            <img src=screenshots/RU/Sources/Sources.png> <p class="fig">Рис. 39 &ndash; Страница &laquo;Источники&raquo;. Список источников</p>
+            <p>Источник включается и выключается кнопкой справа, добавление или редактирование тегов доступно при нажатии на иконку ярлыка, переход по ссылке источника &ndash; кнопкой рядом с названием источника.</p>
+            <img src=screenshots/RU/Sources/Sources_additional.png> <p class="fig">Рис. 40 &ndash; Страница &laquo;Источники&raquo;. Редактор тегов</p>
+            <p>По клику на имя источника открывается раздел его настройки, где реализованы настройки расписания, атрибуты, редактирование тегов и производится тестирование источника.</p>
+            <img src=screenshots/RU/Sources/Sources_details.png> <p class="fig">Рис. 41 &ndash; Страница &laquo;Источники&raquo;. Настройки источника</p>
+            <p>В зависимости от выбранного типа окно создания отображает различные поля для заполнения:</p>
+            <div class="actions">
+                <ol class="centro">
+                    <li>Заполнить поле &laquo;НАЗВАНИЕ&raquo; и остальные условия.</li>
+                    <li>Нажать &laquo;СОХРАНИТЬ&raquo;, после чего источник появится в списке.</li>
+                    <li>Нажать на название источника. Открылось окно настройки источника.</li>
+                    <li>Во вкладке &laquo;Настройка источника&raquo; нажать &laquo;включить&raquo;. Поле поменялось на зелёный цвет и источник включился. Управление, также, доступно из списка источников.</li>
+                    <li>Нажать &laquo;СОХРАНИТЬ ИЗМЕНЕНИЯ&raquo;. Карта действий сохранилась.</li>
+                    <li>Во вкладке &laquo;Тестирование источника&raquo; нажать &laquo;RUN:GRAB&raquo;для запуска тестирования без использования JavaScript или &laquo;RUN:PHANTOMJS&raquo;, если для сбора используются шаги, требующие выполнения скриптов.</li>
+                </ol>
+            </div>
+            <img src=screenshots/RU/Sources/Sources_test.png> <p class="fig">Рис. 42 &ndash; Страница &laquo;Источники&raquo;. Тестирование источника</p>
+            <!--Print page break-->
+            <p class="print"></p>
+        </div>
+        <!--End of Sources-->
+        <!--Scanner-->
+        <div>
+            <h1><a name="scanner"></a>9. Страница &laquo;Сканер&raquo;</h1>
+            <img src=screenshots/ru/Scanner/Scanner.png> <p class="fig">Рис. 43 &ndash; Страница &laquo;Сканер&raquo;</p>
+            <!--NEED NORMAL TEXT-->
+            <p>На экране окно &laquo;Add task&raquo;</p>
+            <div class="actions">
+                <ol class="centro">
+                    <li>Необходимо ввести URL ресурса, выбрать тип проверки, установить флажок &laquo;на контроль&raquo;, если требуется периодическая проверка.</li>
+                    <li>Нажать &laquo;ДОБАВИТЬ&raquo;, задача появится в списке.</li>
+                    <li>Нажать на задачу из списка для отображения подробностей справа.</li>
+                    <li>Нажать &laquo;Выгрузить отчёт&raquo;, скачивание отчёта начнётся автоматически.</li>
+                </ol>
+            </div>
+            <img src=screenshots/ru/Scanner/Scanner_add.png> <p class="fig">Рис. 44 &ndash; Страница &laquo;Сканер&raquo;. Добавление задачи</p>
+            <p>Существует три типа проверок. При постановке &laquo;на контроль&raquo; задача будет периодически выполняться заново (период выполнения &laquo;раз в неделю&raquo;).</p>
+            <p>Кнопка &laquo;Выгрузить отчёт&raquo; начнёт загрузку отчёта по выполненной задаче, а кнопка &laquo;Удалить&raquo; &ndash; удаляет.</p>
+            <img src=screenshots/ru/Scanner/Scanner_result.png> <p class="fig">Рис. 45 &ndash; Страница &laquo;Сканер&raquo;. Результаты выполнения задачи</p>
+            <p>Отчёт скачивается в формате pdf.</p>
+            <img src=screenshots/ru/Scanner/Scanner_report.png> <p class="fig">Рис. 46 &ndash; Страница &laquo;Сканер&raquo;. Элементы отчёта</p>
+            <!--Print page break-->
+            <p class="print"></p>
+        </div>
+        <!--End of Scanner-->
+        <!--Reports-->
+        <div>
+            <h1><a name="reports"></a>Страница &laquo;Отчеты&raquo;</h1>
+            <p>Все ранее созданные отчёты хранятся в разделе &laquo;Отчёты&raquo; и доступны для повторного скачивания при нажатии на название:</p>
+            <img src=screenshots/RU/Reports/Reports.png> <p class="fig">Рис. 47 &ndash; Страница &laquo;Отчеты&raquo;Общий вид</p>
+            <div class="actions">
+                <ol class="centro">
+                    <li>Нажать на название необходимого для скачивания отчёта. Начнется загрузка на жёсткий диск.</li>
+                    <li>Выбрать из выпадающего списка тип отчётов для фильтрации по типам.</li>
+                    <img class="img_act" src=screenshots/ru/Reports/Reports_filter.png> <li>Нажать кнопку &laquo;ПРИМЕНИТЬ&raquo;. В списке отчётов отобразятся только выбранные в фильтре отчеты.</li>
+                    <img class="img_act" src=screenshots/ru/Reports/Reports_apply.png> </ol> </div> <!--Print page break-->
+                    <p class="print"></p>
+            </div>
+            <!--End of Reports-->
+            <!--Cabinet-->
+            <div>
+                <h1><a name="cabinet"></a>10. Личный кабинет</h1>
+                <p>Для настроек пользователя нажать на иконку &laquo;User&raquo; и выбрать &laquo;Личный кабинет&raquo;</p>
+                <img src=screenshots/RU/Cabinet/Cabinet.png> <p class="fig">Рис. 48 &ndash; Вход в &laquo;Личный кабинет&raquo;</p>
+                <p>Кабинет служит для изменения данных пользователя, пароля, включения оповещения по темам (желтой и красной важностей), если предусмотрен доступ к нескольким проектам, то настраивается тот, который будет открываться первым после авторизации.</p>
+                <img src=screenshots/RU/Cabinet/Cabinet_notifications.png> <p class="fig">Рис. 49 &ndash; Страница &laquo;Личный кабинет&raquo;. Управление оповещениями</p>
+                <img src=screenshots/RU/Cabinet/Cabinet_main.png> <p class="fig">Рис. 50 &ndash; Страница &laquo;Личный кабинет&raquo;. Основные данные пользователя</p>
+                <p>Следует верно указывать временную зону в личном кабинете во избежание проблем с публикацией новостных карточек.</p>
+                <img src=screenshots/RU/Cabinet/Cabinet_acces.png> <p class="fig">Рис. 51 &ndash; Страница &laquo;Личный кабинет&raquo;. Выбор проекта по умолчанию</p>
+                <img src=screenshots/RU/Cabinet/Cabinet_safety.png> <p class="fig">Рис. 52 &ndash; Страница &laquo;Личный кабинет&raquo;. Смена пароля</p>
+                <!--Print page break-->
+                <p class="print"></p>
+            </div>
+            <!--End of Cabinet-->
+            <!--Rubrics Operators-->
+            <div>
+                <h1><a name="rub_op"></a>11. Операторы запросов рубрик</h1>
+                <p>В кавычках указывается запрос, который должен присутствовать в тексте буквально, знаком тильда (~) указывается расстояние между словами, для поиска слов в обратном порядке минимальное число должно быть равно двум.</p>
+                <img src=screenshots/RU/Rubrics/querry/Querry_quotes.png> <p class="fig">Рис. 53 &ndash; Страница &laquo;Рубрики&raquo;. Оператор кавычки</p>
+                <p>Для поиска слов с опечатками или с окончаниями знак тильда ставится после слова.</p>
+                <img src=screenshots/RU/Rubrics/querry/Querry_tilda.png> <p class="fig">Рис. 54 &ndash; Страница &laquo;Рубрики&raquo;. Оператор тильда</p>
+                <p>Для групп используются запросы в скобках. Вместо пробела автоматически устанавливается оператор OR.</p>
+                <img src=screenshots/RU/Rubrics/querry/Querry_group.png> <p class="fig">Рис. 55 &ndash; Страница &laquo;Рубрики&raquo;. Оператор групп</p>
+                <p>Если требуется указать точный запрос, не учитывающий процесс нахождения основы слова, требуется указать запрос в фигурных &laquo;{query}&raquo; скобках.</p>
+                <img src=screenshots/RU/Rubrics/querry/Querry_equal.png> <p class="fig">Рис. 56 &ndash; Страница &laquo;Рубрики&raquo;. Оператор точного поиска</p>
+                <p>Если проверочный текст не соответствует запросу, система выдаст сообщение.</p>
+                <img src=screenshots/RU/Rubrics/querry/Querry_test_no_result.png> <p class="fig">Рис. 57 &ndash; Страница &laquo;Рубрики&raquo;. Результат проверки запроса</p>
+                <!--Print page break-->
+                <p class="print"></p>
+            </div>
+            <!--End of Rubrics Operators-->
+            <!--Additional rubrics rules-->
+            <!--Добавить порядок действий-->
+            <div>
+                <h1><a name="rub_rules"></a>12. Дополнительные правила для рубрик</h1>
+                <p>Правилом может служить URL или тег (для нескольких URL). Если карточка подходит под правила, будет совершено выбранное действие:</p>
+                <ul>
+                    <li>&laquo;Только карточки проекта&raquo; &mdash; установив этот чекбокс, рубрикацию будут проходить только карточки из источников проекта, источники базы будут игнорироваться.</li>
+                    <li>&laquo;Только указанные правила&raquo; &mdash; настройка служит для игнорирования не попадающих под указанные правила карточек или источников.</li>
+                </ul>
+                <p>Карточки отображают цвет &laquo;Важности&raquo; и &laquo;Тональность&raquo;, если эти параметры указаны вручную, прошли рубрикацию по правилам или в автоматическом режиме.</p>
+                <img src=screenshots/ru/Rubrics/Rubrics_rules.png> <p class="fig">Рис. 58 &ndash; Страница &laquo;Рубрики&raquo;. Дополнительные правила</p>
+                <p>После настройки рубрики её нужно сохранить.</p>
+                <img src=screenshots/ru/Rubrics/Rubrics_rules.png> <p class="fig">Рис. 59 &ndash; Страница &laquo;Рубрики&raquo;, сохранение настроек</p>
+                <p>Если настройка рубрики изменилась, требуется обновить рубрику, нажав кнопку &laquo;Rerubricate&raquo;.</p>
+                <img src=screenshots/ru/Rubrics/Rubrics_rules.png> <p class="fig">Рис. 60 &ndash; Страница &laquo;Рубрики&raquo;, кнопка перерубрикации проекта</p>
+                <p>Для рубрикации используется поисковая машина &laquo;Elastic&raquo;, поэтому слова не учитывают регистр, число и падеж слова, если только запрос не указан для точного поиска. Оператор &laquo;OR&raquo; устанавливается автоматически.</p>
+                <!--End of Additional rubrics rules-->
+                <!-- Additional notes -->
+                <div>
+                    <h1><a name="addons"></a>Приложение 1</h1>
+                    <table cols="13" class="table_rules">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <p>Оператор</p>
+                                </th>
+                                <th>
+                                    <p>Пример</p>
+                                </th>
+                                <th>
+                                    <p>Комментарии</p>
+                                </th>
+                                <th>
+                                    <p>Работа подсветки</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>""</p>
+                                </td>
+                                <td>
+                                    <p>"this that"</p>
+                                </td>
+                                <td>
+                                    <p>Используются для поиска точного порядка слов.</p>
+                                </td>
+                                <td>
+                                    <p>this is that</p>
+                                    <p class="hl">THiS tHaT</p>
+                                    <p>that this</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>{}</p>
+                                </td>
+                                <td>
+                                    <p>{house}</p>
+                                </td>
+                                <td>
+                                    <p>Используется для поиска точного совпадения, без стемминга.</p>
+                                </td>
+                                <td>
+                                    <p>houses</p>
+                                    <p class="hl">House</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>OR</p>
+                                </td>
+                                <td>
+                                    <p>cat OR dog</p>
+                                    <p>cat dog</p>
+                                </td>
+                                <td>
+                                    <p>Запрос проверяет наличие одного из условий. Устанавливается автоматически вместо пробела.</p>
+                                </td>
+                                <td nowrap>
+                                    <p>My <span class="hl">cat</span> is black</p>
+                                    <p>White <span class="hl">dog</span> walking</p>
+                                    <p><span class="hl">Cat</span> versus <span class="hl">dog</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>AND</p>
+                                </td>
+                                <td>
+                                    <p>black AND coffee</p>
+                                </td>
+                                <td>
+                                    <p>Запрос проверяет обязательное наличие условия, заданного после AND</p>
+                                </td>
+                                <td nowrap>
+                                    <p>my <span class="hl">coffee</span> is great and <span class="hl">black</span></p>
+                                    <p>only <span class="hl">black coffee</span></p>
+                                    <p>back to coffee</p>
+                                    <p>Black tea</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>NOT</p>
+                                </td>
+                                <td nowrap>
+                                    <p>tea OR coffee NOT water</p>
+                                </td>
+                                <td>
+                                    <p>Проверяет отсутствие условия после NOT</p>
+                                </td>
+                                <td>
+                                    <p>black tea hot water</p>
+                                    <p><span class="hl">tea</span> and <span class="hl">coffee</span></p>
+                                    <p><span class="hl">tea</span> is not a <span class="hl">coffee</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>""~</p>
+                                </td>
+                                <td>
+                                    <p>"A B C"~4</p>
+                                </td>
+                                <td>
+                                    <p>Используется для установки возможного расстояния между условиями. Если &gt;2, порядок становится не строгим</p>
+                                </td>
+                                <td nowrap>
+                                    <p><span class="hl">A</span> one two three <span class="hl">B</span> four <span class="hl">C</span></p>
+                                    <p><span class="hl">A</span> one two <span class="hl">b</span> three four <span class="hl">c</span></p>
+                                    <p>A one two three four b five c</p>
+                                    <p><span class="hl">A</span> one two three four <span class="hl">B C</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>""~</td>
+                                <td>
+                                    <p>"A B C"~2</p>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <p>B C A</p>
+                                    <p>C A B</p>
+                                    <p><span class="hl">A C B</span></p>
+                                    <p><span class="hl">B A C</span></p>
+                                    <p>A not C is B</p>
+                                    <p><span class="hl">A</span> one <span class="hl">B</span> two <span class="hl">C</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>~</p>
+                                </td>
+                                <td>
+                                    <p>this OR that~2</p>
+                                </td>
+                                <td>
+                                    <p>Используется для указания количества отличающихся от условия символов</p>
+                                </td>
+                                <td>
+                                    <p><span class="hl">this</span> is not enough <span class="hl">th<u>en</u> that</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>()</p>
+                                </td>
+                                <td nowrap>
+                                    <p>(A NOT B) AND (C)</p>
+                                </td>
+                                <td>
+                                    <p>Используется для создания групп</p>
+                                </td>
+                                <td>
+                                    <p>A one two B three four C</p>
+                                    <p><span class="hl">A</span> one two three four <span class="hl">C</span></p>
+                                    <p>one two three four C</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>*</p>
+                                </td>
+                                <td nowrap>
+                                    <p>Home* OR *less</p>
+                                </td>
+                                <td>
+                                    <p>Проверяется наличие части и любого окончания запроса</p>
+                                </td>
+                                <td>
+                                    <p><span class="hl">Homeless</span></p>
+                                    <p><span class="hl">Less</span></p>
+                                    <p><span class="hl">Home</span></p>
+                                    <p>Rehomed</p>
+                                    <p>lesson</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <p>{cat AND dog} AND (A NOT B) AND (C)</p>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <p>cat A is C dog b</p>
+                                    <p><span class="hl">cat A</span> is <span class="hl">C dog</span></p>
+                                    <p>cat A is dog</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                <div>
+                    <h1><a name="source_map"></a>Приложение 1</h1>
+                    <p>Сценарий сбора информации с веб-страницы представлен в виде фрагментов программного кода. Весь сценарий и блоки с действиями заключается в скобки [&hellip;], действия робота (шаг) -- в фигурные {&hellip;}. Для указания роботу места расположения информации используется язык запросов к элементам XML-документа XPath (XML Path Language).</p>
+                    <p>Описание шагов сценария</p>
+                    <ol>
+                        <li>Шаг сценария &laquo;Ввод значения&raquo;</li>
+                    </ol>
+                    <p>{</p>
+                    <p>&nbsp; "ignore_errors": false,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //игнорировать ошибки (true/false)</p>
+                    <p>&nbsp; "sleep": 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //задержка перед шагом (сек.)</p>
+                    <p>&nbsp; "type": "input",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //тип шага сценария &laquo;Ввод значения&raquo;</p>
+                    <p>&nbsp; "value": "",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //значение для ввода</p>
+                    <p>&nbsp; "xpath": ""&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //XPath поля для ввода данных</p>
+                    <p>}</p>
+                    <p>&nbsp;</p>
+                    <ol start="2">
+                        <li>Шаг сценария &laquo;Клик по элементу&raquo;</li>
+                    </ol>
+                    <p>{</p>
+                    <p>&nbsp; "ignore_errors": false,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //игнорировать ошибки (true/false)</p>
+                    <p>&nbsp; "sleep": 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //задержка перед шагом (сек.)</p>
+                    <p>&nbsp; "type": "click",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //тип шага сценария &laquo;Клик по элементу&raquo;</p>
+                    <p>&nbsp; "xpath": ""&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //XPath элемента</p>
+                    <p>}</p>
+                    <p>&nbsp;</p>
+                    <ol start="3">
+                        <li>Шаг сценария &laquo;Блок ссылок&raquo;</li>
+                    </ol>
+                    <p>{</p>
+                    <p>&nbsp; "ignore_errors": false,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //игнорировать ошибки (true/false)</p>
+                    <p>&nbsp; "limit": 10,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ограничение на сбор элементов</p>
+                    <p>&nbsp; "sleep": 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //задержка перед шагом (сек.)</p>
+                    <p>&nbsp; "takers": [],&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //блок тейкеров(если тейкеров не выбрано, блок остается пустым)</p>
+                    <p>&nbsp; "type": "transfer",&nbsp;&nbsp; //тип шага сценария &laquo;Блок ссылок&raquo;</p>
+                    <p>&nbsp; "xpath": ""&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //абсолютный XPath ссылок для сбора</p>
+                    <p>}</p>
+                    <p>&nbsp;</p>
+                    <ol start="4">
+                        <li>Шаг сценария &laquo;Блок элементов&raquo;</li>
+                    </ol>
+                    <p>{</p>
+                    <p>&nbsp; "ignore_errors": false,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //игнорировать ошибки (true/false)</p>
+                    <p>&nbsp; "limit": 10,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ограничение на сбор элементов</p>
+                    <p>&nbsp; "sleep": 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //задержка перед шагом (сек.)</p>
+                    <p>&nbsp; "takers": [],&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //блок тейкеров(если тейкеров не выбрано, блок остается пустым)</p>
+                    <p>&nbsp; "type": "list",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //тип шага сценария &laquo;Блок элементов&raquo;</p>
+                    <p>&nbsp; "xpath": ""&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //XPath элементов, между которыми осуществляется сбор данных</p>
+                    <p>}</p>
+                    <ol start="5">
+                        <li>Шаг сценария &laquo;Захват данных&raquo;</li>
+                    </ol>
+                    <p>{</p>
+                    <p>&nbsp; "ignore_errors": false,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //игнорировать ошибки (true/false)</p>
+                    <p>&nbsp; "sleep": 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //задержка перед шагом (сек.)</p>
+                    <p>&nbsp; "takers": [],&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //блок тейкеров (если тейкеров не выбрано, блок остается пустым)</p>
+                    <p>&nbsp; "type": "page"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //тип шага сценария &laquo;Захват данных&raquo;</p>
+                    <p>}</p>
+                    <p>&nbsp;</p>
+                    <ol start="6">
+                        <li>Шаг сценария &laquo;Переход по ссылке&raquo;</li>
+                    </ol>
+                    <p>{</p>
+                    <p>&nbsp; "ignore_errors": false,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //игнорировать ошибки (true/false)</p>
+                    <p>&nbsp; "sleep": 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //задержка перед шагом (сек.)</p>
+                    <p>&nbsp; "type": "get",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //тип шага сценария &laquo;Переход по ссылке&raquo;</p>
+                    <p>"value": ""//значение (URL для перехода)</p>
+                    <p>}</p>
+                </div>
+</body>
+
+</html>

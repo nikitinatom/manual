@@ -1,0 +1,95 @@
+html {
+    background: #e6e9e9;
+}
+
+body {
+    background: #fff;
+    color: #545454;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight: 600;
+    line-height: 1.6;
+    padding-left: 1em;
+}
+
+h2 {
+    margin-top: 1.3em;
+}
+
+a {
+    color: black;}
+
+.invisa
+    {
+        text-decoration: none;
+        color:black;
+    }
+
+b, strong {
+    font-weight: 600;
+}
+.menu {
+    text-align:left;
+align-content: center;
+}
+
+.fig {
+    text-align: center;
+    color: black;
+    line-height: 0.5;
+    padding-bottom: 1em;
+}
+.actions {
+    line-height: 1.5;
+    margin-left: 15%;
+    background-color: beige;
+    padding-top: 1em;
+    padding-right: 15%;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    text-align: left;
+    list-style-position: inside;
+    border-radius: 12px/10px;
+}
+img {
+    background: transparent;
+    border: 3px solid rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    display: block;
+    margin: 1em auto;
+    max-width: 95%;
+    border-radius: 5px;
+    }
+.centro {
+    margin-right: 40px;
+}
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+    width: auto;
+    padding: 10px;
+}
+
+.img_act {
+    border-radius: 5px;
+    max-width: 75%;
+    margin: auto;
+    position: relative;
+    }
+.hl {
+    color: crimson
+}
+@media print {
+    p.print { 
+    page-break-after: always;
+    }
+}
